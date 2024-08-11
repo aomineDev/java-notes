@@ -11,6 +11,7 @@ public class Method1 {
 
     int[] arrSorted = quickSort(arr);
     
+    System.out.println();
     System.out.println("Array sorted:");
     System.out.println(Arrays.toString(arrSorted));
   }
