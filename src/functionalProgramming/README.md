@@ -13,7 +13,7 @@
 `BiConsumer<T, U>`: Representa una operación que acepta dos argumentos de tipo `T` y `U` y no devuelve ningún resultado.
 
 ## Supplier
-`Supplier<T>`: Representa una función que no acepta ningún argumento y produce un resultado de tipo `T`.
+`Supplier<R>`: Representa una función que no acepta ningún argumento y produce un resultado de tipo `R`.
 
 ## Predicate
 `Predicate<T>`: Representa una función que acepta un solo argumento de tipo `T` y devuelve un valor booleano.
