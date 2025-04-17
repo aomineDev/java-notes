@@ -1,4 +1,4 @@
-package DSA.algorithms.sortArray;
+package DSA.algorithms.sort.sortArray;
 
 import java.util.Arrays;
 

@@ -1,10 +1,10 @@
-package DSA.algorithms.quickSort;
+package DSA.algorithms.sort.quickSort;
 
 import java.util.Arrays;
 
 public class Method2 {
   public static void main(String[] args) {
-    String[] arr = {"ariel", "Omar", "aomine", "akashi", "kiyotaka", "marco", "shiro hige"};
+    String[] arr = { "ariel", "Omar", "aomine", "akashi", "kiyotaka", "marco", "shiro hige" };
 
     System.out.println("Initial array:");
     System.out.println(Arrays.toString(arr));
@@ -26,7 +26,7 @@ public class Method2 {
     String pivot = arr[high];
     int i = low;
 
-    for(int j = low; j < high; j++) {
+    for (int j = low; j < high; j++) {
       int res = arr[j].compareTo(pivot);
 
       if (res < 0) {
@@ -41,7 +41,8 @@ public class Method2 {
   }
 
   static void quickSortRecursive(String[] arr, int low, int high) {
-    if(!(high > low)) return;
+    if (!(high > low))
+      return;
 
     int pi = partition(arr, low, high);
 
@@ -49,15 +50,15 @@ public class Method2 {
     quickSortRecursive(arr, pi + 1, high);
   }
 
-  static String[] quickSort (String[] arr) {
+  static String[] quickSort(String[] arr) {
     String[] newArr = clone(arr);
 
     quickSortRecursive(newArr, 0, arr.length - 1);
 
     return newArr;
-  } 
+  }
 
-  static String[] clone (String[] arr) {
+  static String[] clone(String[] arr) {
     String[] newArr = new String[arr.length];
 
     for (int i = 0; i < arr.length; i++) {
@@ -65,5 +66,5 @@ public class Method2 {
     }
 
     return newArr;
-  } 
+  }
 }

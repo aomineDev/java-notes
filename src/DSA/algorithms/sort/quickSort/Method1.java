@@ -1,4 +1,4 @@
-package DSA.algorithms.quickSort;
+package DSA.algorithms.sort.quickSort;
 
 import java.util.Arrays;
 
@@ -10,13 +10,13 @@ public class Method1 {
     System.out.println(Arrays.toString(arr));
 
     int[] arrSorted = quickSort(arr);
-    
+
     System.out.println();
     System.out.println("Array sorted:");
     System.out.println(Arrays.toString(arrSorted));
   }
 
-  static void swap (int[] arr, int a, int b) {
+  static void swap(int[] arr, int a, int b) {
     int temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
@@ -38,8 +38,9 @@ public class Method1 {
     return i;
   }
 
-  static void quickSortRecursive (int[] arr, int low, int high) {
-    if (!(low < high)) return;
+  static void quickSortRecursive(int[] arr, int low, int high) {
+    if (!(low < high))
+      return;
 
     int pi = partition(arr, low, high);
 
@@ -47,7 +48,7 @@ public class Method1 {
     quickSortRecursive(arr, pi + 1, high);
   }
 
-  static int[] quickSort (int arr[]) {
+  static int[] quickSort(int arr[]) {
     int[] newArr = clone(arr);
 
     quickSortRecursive(newArr, 0, newArr.length - 1);
@@ -55,7 +56,7 @@ public class Method1 {
     return newArr;
   }
 
-  static int[] clone (int[] arr) {
+  static int[] clone(int[] arr) {
     int[] newArr = new int[arr.length];
     for (int i = 0; i < arr.length; i++) {
       newArr[i] = arr[i];
