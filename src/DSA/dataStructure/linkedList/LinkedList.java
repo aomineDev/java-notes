@@ -1,4 +1,4 @@
-package DSA.dataStructure.arrayToCollections.linkedList;
+package DSA.dataStructure.linkedList;
 
 public class LinkedList {
 
